@@ -87,52 +87,88 @@
 ///////////////////Now we are going to learn the concept of key in react 
 
 
-import {useState} from 'react'; 
-import React from 'react';
+// import {useState} from 'react'; 
+// import React from 'react';
 
-let count  = 4;
-function App() {
-  const [applytodo,setTodo] = useState([{
-    id:1,
-    title:"go to gym",
-    description:"go to gym today"
-  },
-  {
-    id:2,
-    title:"eat food",
-    description:"eat your food today"
-  },
-  {
-    id:3,
-    title:"play game",
-    description:" gym today"
-  }
-])
+// let count  = 4;
+// function App() {
+//   const [applytodo,setTodo] = useState([{
+//     id:1,
+//     title:"go to gym",
+//     description:"go to gym today"
+//   },
+//   {
+//     id:2,
+//     title:"eat food",
+//     description:"eat your food today"
+//   },
+//   {
+//     id:3,
+//     title:"play game",
+//     description:" gym today"
+//   }
+// ])
 
-function AddTodo(){
-    setTodo([...applytodo,{
-      id:count++,
-      title:Math.random(),
-      description: Math.random()
-    }])
-}
+// function AddTodo(){
+//     setTodo([...applytodo,{
+//       id:count++,
+//       title:Math.random(),
+//       description: Math.random()
+//     }])
+// }
 
-  return (
-    <div>
-      <button onClick={AddTodo}> Add new Todo</button>
-    {applytodo.map(todo=> <Todo key={todo.id} title={todo.title} description={todo.description}/>)}
-    <Todo  />
-    </div>
-  )
-}
+//   return (
+//     <div>
+//       <button onClick={AddTodo}> Add new Todo</button>
+//     {applytodo.map(todo=> <Todo key={todo.id} title={todo.title} description={todo.description}/>)}
+//     <Todo  />
+//     </div>
+//   )
+// }
 
-function Todo({title,description}){
-  return<div>
-    <h1>{title}</h1>
-    <h5>{description}</h5>
-  </div>
-}
+// function Todo({title,description}){
+//   return<div>
+//     <h1>{title}</h1>
+//     <h5>{description}</h5>
+//   </div>
+// }
 
-export default App
+// export default App
+
+
+/////// we are going to learn about wrapper component and who to use children prop to create multiple wrapper component
+
+
+
+// import {useState} from 'react'; 
+// import React from 'react';
+
+
+// function App() {
+//   return <div>
+//     <CardWrapper>
+//       <div> hi there </div>
+//     </CardWrapper>
+//   </div>
+  
+// }
+
+
+// function CardWrapper({children}){
+//   console.log(children)
+//   return <div style={{border:"2px solid black"}} >
+//   {children}
+// </div>
+// }
+
+
+
+// export default App 
+
+
+//////now we are going to learn about hooks 
+// first hook that  we are covering is useEffect
+
+
 
 
